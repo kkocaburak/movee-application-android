@@ -33,8 +33,8 @@ android {
             buildConfigField "String", "BASE_TV_SERIES_URL", '"https://www.themoviedb.org/tv/"'
             buildConfigField "String", "MAPS_BASE_URL", '"https://maps.googleapis.com/"'
             buildConfigField "String", "BASE_MOVIE_IMG_URL", '"https://image.tmdb.org/t/p/"'
-            buildConfigField "String", "API_KEY", '"d42a91209c97b1223991f55ac71f0ed6"'
-            buildConfigField "String", "MAPS_API_KEY", '"AIzaSyDGdGZUB5b_PfD90TvnkoHvW-JJdETDYjg"'
+            buildConfigField "String", "API_KEY", '"{YOUR_TMDB_API_KEY}"'
+            buildConfigField "String", "MAPS_API_KEY", '"{YOUR_GOOGLE_MAPS_API_KEY}"'
         }
         debug {
             buildConfigField "String", "BASE_URL", '"https://api.themoviedb.org/3/"'
@@ -42,8 +42,8 @@ android {
             buildConfigField "String", "BASE_TV_SERIES_URL", '"https://www.themoviedb.org/tv/"'
             buildConfigField "String", "MAPS_BASE_URL", '"https://maps.googleapis.com/"'
             buildConfigField "String", "BASE_MOVIE_IMG_URL", '"https://image.tmdb.org/t/p/"'
-            buildConfigField "String", "API_KEY", '"d42a91209c97b1223991f55ac71f0ed6"'
-            buildConfigField "String", "MAPS_API_KEY", '"AIzaSyDGdGZUB5b_PfD90TvnkoHvW-JJdETDYjg"'
+            buildConfigField "String", "API_KEY", '"{YOUR_TMDB_API_KEY}"'
+            buildConfigField "String", "MAPS_API_KEY", '"{YOUR_GOOGLE_MAPS_API_KEY}"'
         }
     }
 
