@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="tvDetailView"
+            type="com.adesso.moveeapplication.ui.screens.detail.tvdetail.view.TvSeriesDetailFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.screens.detail.tvdetail.view.TvSeriesDetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/frameLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/fragment_tv_series_detail_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/huge_dp_380"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_tv_series_detail_linear_rating"
+                    android:layout_width="@dimen/medium_dp_50"
+                    android:layout_height="@dimen/small_dp_20"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_background_blue"
+                    android:layout_marginStart="@dimen/medium_dp_32"
+                    android:layout_marginTop="@dimen/huge_dp_370"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/small_dp_16"
+                        android:layout_height="@dimen/small_dp_16"
+                        android:src="@drawable/main_screen_image_star"/>
+
+                    <TextView
+                        android:id="@+id/fragment_tv_series_detail_txt_rating"
+                        style="@style/White_SF_PRO_Black_10"
+                        android:layout_width="@dimen/small_dp_20"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/small_dp_4"
+                        android:layout_marginBottom="@dimen/small_dp_2"
+                        android:text="@{String.valueOf(tvDetailView.selectedTvSeries.voteAverage)}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fragment_tv_series_detail_layout_favorite"
+                    android:layout_width="@dimen/medium_dp_36"
+                    android:layout_height="@dimen/medium_dp_36"
+                    android:layout_gravity="end|top"
+                    android:layout_marginTop="@dimen/medium_dp_48"
+                    android:layout_marginEnd="@dimen/medium_dp_32"
+                    android:onClick="@{() -> tvDetailView.postTvSeriesFavorite()}"
+                    android:visibility="@{tvDetailView.isGuest != true ? View.VISIBLE : View.GONE}"
+                    android:background="@drawable/rounded_background_white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/fragment_tv_series_detail_img_favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@{tvDetailView.isItemFavorite == true ? @drawable/heart_selected : @drawable/heart}"  />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/fragment_tv_series_detail_txt_name"
+                style="@style/Black_SF_PRO_Bold_28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_4"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                android:text="@{tvDetailView.selectedTvSeries.name}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+
+            <TextView
+                android:id="@+id/fragment_tv_series_detail_txt_genre"
+                style="@style/Black_SF_PRO_Medium_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_4"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                android:text="@{tvDetailView.genreString}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_tv_series_detail_txt_name" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_8"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_tv_series_detail_txt_genre">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/movie_detail_image_time" />
+
+                <TextView
+                    android:id="@+id/fragment_tv_series_detail_txt_duration"
+                    style="@style/Grey_SF_PRO_Regular_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(tvDetailView.tvSeriesDetailViewModel.tvDetailResponse.episodeRunTime[0])}"
+                    android:layout_marginStart="@dimen/small_dp_4" />
+
+                <TextView
+                    style="@style/Grey_SF_PRO_Regular_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/min_string" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_dp_8"
+                    android:text="@string/separator_string" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_dp_12"
+                    android:src="@drawable/main_screen_image_calendar" />
+
+                <TextView
+                    android:id="@+id/fragment_tv_series_detail_txt_release"
+                    style="@style/Grey_SF_PRO_Regular_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_dp_5"
+                    android:text="@{tvDetailView.tvSeriesDetailViewModel.tvDetailResponse.firstAirDate}" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/fragment_tv_series_detail_img_rate"
+                android:layout_width="@dimen/medium_dp_40"
+                android:layout_height="@dimen/medium_dp_40"
+                android:layout_marginTop="@dimen/small_dp_16"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                android:src="@drawable/rate_button"
+                android:onClick="@{() -> tvDetailView.rateButtonOnClick()}"
+                android:visibility="@{tvDetailView.isGuest != true ? View.VISIBLE : View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <TextView
+                android:id="@+id/fragment_tv_series_detail_txt_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_8"
+                android:text="@{tvDetailView.tvRateString}"
+                android:visibility="@{tvDetailView.isGuest != true ? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="@+id/fragment_tv_series_detail_img_rate"
+                app:layout_constraintStart_toStartOf="@+id/fragment_tv_series_detail_img_rate"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_tv_series_detail_img_rate" />
+
+            <LinearLayout
+                android:id="@+id/fragment_tv_series_detail_linear_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/medium_dp_40"
+                android:layout_marginTop="@dimen/small_dp_16"
+                android:layout_marginStart="@dimen/small_dp_16"
+                android:visibility="@{tvDetailView.isRateClicked != false ? View.VISIBLE : View.GONE}"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toEndOf="@+id/fragment_tv_series_detail_img_rate"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <TextView
+                    android:layout_width="@dimen/small_dp_1"
+                    android:layout_height="@dimen/medium_dp_40"
+                    android:background="@color/movee_gray" />
+
+                <ImageView
+                    android:id="@+id/fragment_tv_series_detail_img_rate1"
+                    android:layout_width="@dimen/medium_dp_32"
+                    android:layout_height="@dimen/medium_dp_32"
+                    android:layout_marginStart="@dimen/small_dp_16"
+                    android:layout_gravity="center"
+                    android:src="@drawable/rate_star"/>
+                <ImageView
+                    android:id="@+id/fragment_tv_series_detail_img_rate2"
+                    android:layout_width="@dimen/medium_dp_32"
+                    android:layout_height="@dimen/medium_dp_32"
+                    android:layout_marginStart="@dimen/small_dp_16"
+                    android:layout_gravity="center"
+                    android:src="@drawable/rate_star"/>
+                <ImageView
+                    android:id="@+id/fragment_tv_series_detail_img_rate3"
+                    android:layout_width="@dimen/medium_dp_32"
+                    android:layout_height="@dimen/medium_dp_32"
+                    android:layout_marginStart="@dimen/small_dp_16"
+                    android:layout_gravity="center"
+                    android:src="@drawable/rate_star"/>
+                <ImageView
+                    android:id="@+id/fragment_tv_series_detail_img_rate4"
+                    android:layout_width="@dimen/medium_dp_32"
+                    android:layout_height="@dimen/medium_dp_32"
+                    android:layout_marginStart="@dimen/small_dp_16"
+                    android:layout_gravity="center"
+                    android:src="@drawable/rate_star"/>
+                <ImageView
+                    android:id="@+id/fragment_tv_series_detail_img_rate5"
+                    android:layout_width="@dimen/medium_dp_32"
+                    android:layout_height="@dimen/medium_dp_32"
+                    android:layout_marginStart="@dimen/small_dp_16"
+                    android:layout_gravity="center"
+                    android:src="@drawable/rate_star"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/fragment_tv_series_detail_img_share"
+                android:layout_width="@dimen/medium_dp_40"
+                android:layout_height="@dimen/medium_dp_40"
+                android:layout_marginTop="@dimen/small_dp_16"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                android:src="@drawable/share_button"
+                android:onClick="@{() -> tvDetailView.shareUrl()}"
+                android:visibility="@{tvDetailView.isGuest == false ? (tvDetailView.isRateClicked == true ? View.GONE : View.VISIBLE) : View.GONE}"
+                app:layout_constraintStart_toEndOf="@+id/fragment_tv_series_detail_img_rate"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <TextView
+                android:id="@+id/fragment_tv_series_detail_txt_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_8"
+                android:text="@string/share_string"
+                android:visibility="@{tvDetailView.isGuest == false ? (tvDetailView.isRateClicked == true ? View.GONE : View.VISIBLE) : View.GONE}"
+                app:layout_constraintEnd_toEndOf="@+id/fragment_tv_series_detail_img_share"
+                app:layout_constraintStart_toStartOf="@+id/fragment_tv_series_detail_img_share"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_tv_series_detail_img_share" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="@dimen/huge_dp_300"
+                android:layout_height="@dimen/small_dp_1"
+                android:layout_marginTop="@dimen/small_dp_16"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                android:background="@color/movee_gray"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_tv_series_detail_txt_rate" />
+
+            <TextView
+                android:id="@+id/fragment_tv_series_detail_txt_overview"
+                style="@style/Black_SF_PRO_Regular_16"
+                android:layout_width="@dimen/huge_dp_300"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                android:layout_marginTop="@dimen/small_dp_16"
+                android:gravity="center_vertical"
+                android:text="@{tvDetailView.selectedTvSeries.overview}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <LinearLayout
+                android:id="@+id/fragment_tv_series_detail_linear_season"
+                android:layout_width="@dimen/large_dp_80"
+                android:layout_height="@dimen/small_dp_20"
+                android:layout_marginTop="@dimen/small_dp_16"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                android:background="@drawable/rounded_background_gray"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_tv_series_detail_txt_overview">
+
+                <TextView
+                    android:id="@+id/fragment_tv_series_detail_txt_season"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_dp_24"
+                    android:text="@{String.valueOf(tvDetailView.tvSeriesDetailViewModel.tvDetailResponse.numberOfSeasons)}"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    style="@style/White_SF_PRO_Black_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_dp_24"
+                    android:text="@string/fragment_tv_series_detail_txt_season"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    style="@style/White_SF_PRO_Black_12"
+                    android:layout_marginStart="@dimen/small_dp_4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_tv_series_detail_linear_creators"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_16"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                android:layout_marginBottom="@dimen/small_dp_16"
+                android:visibility="@{tvDetailView.tvSeriesDetailViewModel.tvDetailResponse.createdBy.empty ? View.GONE : View.VISIBLE}"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_tv_series_detail_linear_season">
+
+                <TextView
+                    android:layout_width="@dimen/large_dp_72"
+                    android:layout_height="@dimen/small_dp_24"
+                    android:gravity="center_vertical"
+                    style="@style/Black_SF_PRO_Regular_16"
+                    android:text="@string/ui_creators_string"/>
+
+                <TextView
+                    android:id="@+id/fragment_tv_series_detail_txt_creators"
+                    style="@style/Blue_SF_PRO_Semi_Bold_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_dp_24"
+                    android:layout_marginStart="@dimen/small_dp_4"
+                    android:text="@{tvDetailView.tvSeriesDetailViewModel.tvDetailResponse.createdBy.empty ? null : tvDetailView.tvSeriesDetailViewModel.tvDetailResponse.createdBy[0].name}"
+                    android:gravity="center_vertical" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment_tv_series_detail_txt_cast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                style="@style/Black_SF_PRO_Bold_28"
+                android:layout_marginTop="@dimen/small_dp_8"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                android:text="@string/cast_string"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_tv_series_detail_linear_creators"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_tv_detail_recycler_cast"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/large_dp_100"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_tv_series_detail_txt_cast"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

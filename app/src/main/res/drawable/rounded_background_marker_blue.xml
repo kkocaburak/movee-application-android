@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="@color/vibrant_blue">
+    </solid>
+    <stroke
+        android:width="@dimen/rounded_background_width"
+        android:color="@color/white">
+    </stroke>
+    <corners
+        android:topLeftRadius="@dimen/large_dp_100"
+        android:topRightRadius="@dimen/large_dp_100"
+        android:bottomLeftRadius="@dimen/large_dp_100"
+        android:bottomRightRadius="@dimen/large_dp_100">
+    </corners>
+</shape>

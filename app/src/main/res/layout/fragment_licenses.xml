@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="licenseFragment"
+            type="com.adesso.moveeapplication.ui.screens.settings.licences.view.LicensesFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/splash_screen_background"
+        tools:context=".ui.screens.settings.licences.view.LicensesFragment">
+
+        <TextView
+            android:id="@+id/fragment_licenses_txt_retrofit"
+            style="@style/Blue_SF_PRO_Bold_16"
+            android:layout_width="@dimen/huge_dp_216"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_dp_48"
+            android:padding="@dimen/small_dp_2"
+            android:onClick="@{() -> licenseFragment.onLicenseClick(licenseFragment.retrofitUrl)}"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/white"
+            android:text="@string/retrofit_url_string" />
+
+        <TextView
+            android:id="@+id/fragment_licenses_txt_glide"
+            style="@style/Blue_SF_PRO_Bold_16"
+            android:layout_width="@dimen/huge_dp_216"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_dp_8"
+            android:padding="@dimen/small_dp_2"
+            android:onClick="@{() -> licenseFragment.onLicenseClick(licenseFragment.glideUrl)}"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/white"
+            android:text="@string/glide_url_string" />
+
+        <TextView
+            android:id="@+id/fragment_licenses_txt_rx_java"
+            style="@style/Blue_SF_PRO_Bold_16"
+            android:layout_width="@dimen/huge_dp_216"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_dp_8"
+            android:padding="@dimen/small_dp_2"
+            android:onClick="@{() -> licenseFragment.onLicenseClick(licenseFragment.rxJavaUrl)}"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/white"
+            android:text="@string/rx_java_url_string" />
+
+        <TextView
+            android:id="@+id/fragment_licenses_txt_rx_binding"
+            style="@style/Blue_SF_PRO_Bold_16"
+            android:layout_width="@dimen/huge_dp_216"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_dp_8"
+            android:layout_gravity="center"
+            android:padding="@dimen/small_dp_2"
+            android:onClick="@{() -> licenseFragment.onLicenseClick(licenseFragment.rxBindingUrl)}"
+            android:gravity="center"
+            android:background="@color/white"
+            android:text="@string/rx_binding_url_string" />
+
+        <WebView
+            android:id="@+id/fragment_licenses_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/medium_dp_40"/>
+
+    </LinearLayout>
+
+</layout>

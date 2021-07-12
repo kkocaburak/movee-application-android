@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.adesso.moveeapplication.ui.components.header.SecondarySectionRowHolder"/>
+        <variable
+            name="secondaryHeader"
+            type="com.adesso.moveeapplication.ui.components.generic.SecondaryHeaderSection" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/primary_header_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Black_SF_PRO_Bold_24"
+            android:text="@{secondaryHeader.title}"
+            android:paddingTop="@dimen/small_dp_16"
+            android:paddingStart="@dimen/medium_dp_32" />
+    </LinearLayout>
+</layout>

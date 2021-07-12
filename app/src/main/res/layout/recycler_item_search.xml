@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.adesso.moveeapplication.ui.components.searchrecycler.RecyclerSearchRowHolder"/>
+        <variable
+            name="searchItem"
+            type="com.adesso.moveeapplication.ui.components.generic.SearchItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_dp_100"
+        app:cardCornerRadius="@dimen/small_radius_8"
+        android:layout_marginStart="@dimen/medium_dp_32"
+        android:layout_marginEnd="@dimen/medium_dp_32"
+        android:layout_marginTop="@dimen/small_dp_24"
+        android:layout_marginBottom="@dimen/small_dp_8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/recycler_item_search_img"
+                android:layout_width="@dimen/large_dp_72"
+                android:layout_height="@dimen/large_dp_100"
+                android:src="@{searchItem.item.posterPath != null ? searchItem.item.posterPath : searchItem.item.profilePath}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/recycler_item_search_txt_name"
+                android:layout_width="@dimen/huge_dp_216"
+                android:layout_height="@dimen/medium_dp_28"
+                android:layout_marginStart="@dimen/small_dp_10"
+                android:layout_marginTop="@dimen/small_dp_8"
+                android:text="@{searchItem.item.title != null ? searchItem.item.title : searchItem.item.name }"
+                style="@style/Black_SF_PRO_Bold_20"
+                app:layout_constraintStart_toEndOf="@+id/recycler_item_search_img"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <TextView
+                android:id="@+id/recycler_item_search_txt_item_info"
+                android:layout_width="@dimen/huge_dp_216"
+                android:layout_height="@dimen/small_dp_22"
+                android:layout_marginTop="@dimen/small_dp_5"
+                style="@style/Black_SF_PRO_Regular_16"
+                app:layout_constraintStart_toStartOf="@+id/recycler_item_search_txt_name"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_item_search_txt_name">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/recycler_item_search_ic_item"
+                android:layout_width="@dimen/small_dp_16"
+                android:layout_height="@dimen/small_dp_16"
+                android:layout_marginTop="@dimen/small_dp_8"
+                app:layout_constraintStart_toStartOf="@+id/recycler_item_search_txt_item_info"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_item_search_txt_item_info" />
+
+            <TextView
+                android:id="@+id/recycler_item_search_txt_item"
+                style="@style/Grey_SF_PRO_Regular_12"
+                android:layout_width="@dimen/huge_dp_128"
+                android:layout_height="@dimen/small_dp_16"
+                android:layout_marginStart="@dimen/small_dp_4"
+                app:layout_constraintBottom_toBottomOf="@+id/recycler_item_search_ic_item"
+                app:layout_constraintStart_toEndOf="@+id/recycler_item_search_ic_item"
+                app:layout_constraintTop_toTopOf="@+id/recycler_item_search_ic_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

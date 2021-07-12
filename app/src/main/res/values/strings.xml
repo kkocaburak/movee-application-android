@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Movee</string>
+    <string name="app_language">en-US</string>
+    <string name="yes_string">Yes</string>
+    <string name="no_string">No</string>
+    <string name="respond_false" translatable="false">response is not successful</string>
+    <string name="null_string" translatable="false">null</string>
+    <string name="comma_string" translatable="false">,</string>
+    <string name="dot_string" translatable="false">.</string>
+    <string name="empty_string" translatable="false">""</string>
+    <string name="quit_app_string">App will close, do you want to continue?</string>
+    <string name="sign_up_url" translatable="false">"https://www.themoviedb.org/signup"</string>
+    <string name="forgot_password_url" translatable="false">https://www.themoviedb.org/reset-password</string>
+    <string name="android_src_string" translatable="false">android:src</string>
+    <string name="maps_api_key" translatable="false">AIzaSyDGdGZUB5b_PfD90TvnkoHvW-JJdETDYjg</string>
+    <string name="maps_text_search_parameters" translatable="false">name,rating,formatted_address,website,geometry</string>
+    <string name="text_plain_string" translatable="false">text/plain</string>
+    <string name="share_media_string">Share media url to..</string>
+    <string name="share_end_point" translatable="false">%1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="activity_splash_text_we">We</string>
+</resources>

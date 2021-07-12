@@ -1,0 +1,26 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "id": 615665,
+      "video": false,
+      "vote_count": 563,
+      "vote_average": 7.3,
+      "title": "Holidate",
+      "release_date": "2020-10-28",
+      "original_language": "en",
+      "original_title": "Holidate",
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "backdrop_path": "/dUN960snyYJv3UfCOUEW071Ww7w.jpg",
+      "adult": false,
+      "overview": "Fed up with being single on holidays, two strangers agree to be each other's platonic plus-ones all year long, only to catch real feelings along the way.",
+      "poster_path": "/lAaJc9842RDVrjvR3OLPMTeHkiA.jpg",
+      "popularity": 305.215
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 3
+}

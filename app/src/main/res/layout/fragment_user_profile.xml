@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="userProfileFragment"
+            type="com.adesso.moveeapplication.ui.screens.dashboard.user.view.UserProfileFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.screens.dashboard.user.view.UserProfileFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/huge_dp_200"
+            android:background="@color/vibrant_blue"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/profile_text"
+                style="@style/White_SF_PRO_Bold_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_dp_32"
+                android:layout_marginStart="@dimen/medium_dp_32"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/profile_string"/>
+
+            <ImageView
+                android:id="@+id/fragment_user_profile_img_settings"
+                style="@style/White_SF_PRO_Bold_32"
+                android:layout_width="@dimen/medium_dp_32"
+                android:layout_height="@dimen/medium_dp_32"
+                android:layout_marginEnd="@dimen/medium_dp_32"
+                android:src="@drawable/settings"
+                android:onClick="@{() -> userProfileFragment.goToSettingsScreen()}"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/profile_text" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/White_SF_PRO_Regular_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_12"
+                android:text="@string/hello_string"
+                app:drawableEndCompat="@drawable/ic_hand_hello"
+                app:layout_constraintStart_toStartOf="@+id/profile_text"
+                app:layout_constraintTop_toBottomOf="@+id/profile_text" />
+
+            <TextView
+                android:id="@+id/fragment_user_profile_txt_name"
+                style="@style/White_SF_PRO_Bold_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_user_profile_recycler_favorites"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    </LinearLayout>
+
+</layout>

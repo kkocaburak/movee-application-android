@@ -1,0 +1,30 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "id": 531219,
+      "video": false,
+      "vote_count": 620,
+      "vote_average": 7,
+      "title": "Roald Dahl's The Witches",
+      "release_date": "2020-10-26",
+      "original_language": "en",
+      "original_title": "Roald Dahl's The Witches",
+      "genre_ids": [
+        14,
+        10751,
+        12,
+        35,
+        27
+      ],
+      "backdrop_path": "/8rIoyM6zYXJNjzGseT3MRusMPWl.jpg",
+      "adult": false,
+      "overview": "In late 1967, a young orphaned boy goes to live with his loving grandma in the rural Alabama town of Demopolis. As the boy and his grandmother encounter some deceptively glamorous but thoroughly diabolical witches, she wisely whisks him away to a seaside resort. Regrettably, they arrive at precisely the same time that the world's Grand High Witch has gathered.",
+      "poster_path": "/betExZlgK0l7CZ9CsCBVcwO1OjL.jpg",
+      "popularity": 1507.392,
+      "rating": 6
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 8
+}

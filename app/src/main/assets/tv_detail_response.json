@@ -1,0 +1,70 @@
+{
+  "backdrop_path": "/wN3O4XslWcWGtYAzPXnwU9ytOQa.jpg",
+  "created_by": [],
+  "episode_run_time": [
+    60
+  ],
+  "first_air_date": "1962-10-05",
+  "genres": [
+    {
+      "id": 10768,
+      "name": "War & Politics"
+    }
+  ],
+  "homepage": "",
+  "id": 213,
+  "in_production": false,
+  "languages": [
+    "en"
+  ],
+  "last_air_date": "1963-06-01",
+  "last_episode_to_air": {
+    "air_date": "1963-06-01",
+    "episode_number": 26,
+    "id": 12451,
+    "name": "A Place to Die",
+    "overview": "",
+    "production_code": "",
+    "season_number": 1,
+    "show_id": 213,
+    "still_path": null,
+    "vote_average": 0,
+    "vote_count": 0
+  },
+  "name": "The Gallant Men",
+  "next_episode_to_air": null,
+  "networks": [
+    {
+      "name": "ABC",
+      "id": 2,
+      "logo_path": "/ndAvF4JLsliGreX87jAc9GdjmJY.png",
+      "origin_country": "US"
+    }
+  ],
+  "number_of_episodes": 26,
+  "number_of_seasons": 1,
+  "origin_country": [
+    "US"
+  ],
+  "original_language": "en",
+  "original_name": "The Gallant Men",
+  "overview": "The Gallant Men is a 1962–1963 ABC television series which depicted an infantry company of American soldiers fighting their way through Italy in World War II.",
+  "popularity": 5.667,
+  "poster_path": "/a9WTIIvQOKRVXpsptBTgSSygWDB.jpg",
+  "production_companies": [],
+  "seasons": [
+    {
+      "air_date": "1962-10-05",
+      "episode_count": 26,
+      "id": 685,
+      "name": "Season 1",
+      "overview": "",
+      "poster_path": null,
+      "season_number": 1
+    }
+  ],
+  "status": "Ended",
+  "type": "Scripted",
+  "vote_average": 0,
+  "vote_count": 0
+}

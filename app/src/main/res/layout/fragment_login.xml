@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="loginFragment"
+            type="com.adesso.moveeapplication.ui.screens.dashboard.login.view.LoginFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/login_background"
+        tools:context=".ui.screens.dashboard.login.view.LoginFragment">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_dp_100"
+            android:layout_gravity="center"
+            android:src="@drawable/splash_screen_image_main"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/fragment_login_layout_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="@{loginFragment.isLoading ? View.INVISIBLE : View.VISIBLE}"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/White_SF_PRO_Regular_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large_dp_64"
+                    android:layout_marginStart="@dimen/medium_dp_48"
+                    android:text="@string/username_string" />
+
+                <EditText
+                    android:id="@+id/fragment_login_edit_txt_username"
+                    style="@style/White_SF_PRO_Medium_16"
+                    android:layout_width="@dimen/huge_dp_300"
+                    android:layout_height="wrap_content"
+                    android:text="karakoca"
+                    android:layout_marginStart="@dimen/medium_dp_48" />
+
+                <TextView
+                    style="@style/White_SF_PRO_Regular_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_dp_24"
+                    android:layout_marginStart="@dimen/medium_dp_48"
+                    android:text="@string/password_string" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white">
+
+                    <EditText
+                        android:id="@+id/fragment_login_edit_text_password"
+                        style="@style/White_SF_PRO_Medium_16"
+                        android:layout_width="@dimen/huge_dp_300"
+                        android:layout_height="wrap_content"
+                        android:text="asdasd"
+                        android:layout_marginStart="@dimen/medium_dp_48"
+                        android:inputType="textPassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/fragment_login_progress_bar_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="@{loginFragment.isLoading ? View.VISIBLE : View.INVISIBLE}"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <TextView
+            style="@style/White_SF_PRO_Regular_12"
+            android:id="@+id/fragment_login_txt_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> loginFragment.forgotPasswordOnClick()}"
+            android:layout_marginTop="@dimen/small_dp_12"
+            android:layout_marginEnd="@dimen/medium_dp_32"
+            android:layout_gravity="end"
+            android:text="@string/forgot_password_string"/>
+
+        <Button
+            style="@style/Blue_SF_PRO_Bold_16"
+            android:id="@+id/fragment_login_button_login"
+            android:layout_width="@dimen/huge_dp_300"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_dp_16"
+            android:onClick="@{() -> loginFragment.loginOnClick()}"
+            android:layout_gravity="center"
+            android:text="@string/login_string"
+            android:background="@color/white" />
+
+        <Button
+            style="@style/Blue_SF_PRO_Bold_16"
+            android:id="@+id/fragment_login_button_sign_as_guest"
+            android:layout_width="@dimen/huge_dp_300"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_dp_16"
+            android:onClick="@{() -> loginFragment.loginAsGuestOnClick()}"
+            android:layout_gravity="center"
+            android:text="@string/continue_guest_string"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_dp_4"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Grey_SF_PRO_Regular_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/register_text_string" />
+
+            <TextView
+                style="@style/White_SF_PRO_Regular_12"
+                android:id="@+id/fragment_login_txt_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_dp_4"
+                android:onClick="@{() -> loginFragment.registerOnClick()}"
+                android:layout_gravity="center"
+                android:text="@string/register_now_string" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.adesso.moveeapplication.ui.components.favorites.RecyclerFavoritesRowHolder"/>
+        <variable
+            name="favoriteItem"
+            type="com.adesso.moveeapplication.ui.components.generic.IGenericItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_dp_100"
+        app:cardCornerRadius="@dimen/small_radius_8"
+        android:layout_marginStart="@dimen/medium_dp_32"
+        android:layout_marginEnd="@dimen/medium_dp_32"
+        android:layout_marginTop="@dimen/small_dp_24"
+        android:layout_marginBottom="@dimen/small_dp_8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/recycler_item_search_img"
+                android:layout_width="@dimen/large_dp_72"
+                android:layout_height="@dimen/large_dp_100"
+                android:src="@{favoriteItem.photoUrl}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/recycler_item_search_txt_name"
+                android:layout_width="@dimen/huge_dp_216"
+                android:layout_height="@dimen/medium_dp_32"
+                android:layout_marginStart="@dimen/small_dp_10"
+                android:layout_marginTop="@dimen/small_dp_8"
+                android:text="@{favoriteItem.name}"
+                style="@style/Black_SF_PRO_Bold_20"
+                app:layout_constraintStart_toEndOf="@+id/recycler_item_search_img"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <TextView
+                android:id="@+id/recycler_item_favorites_txt_info"
+                android:layout_width="@dimen/huge_dp_216"
+                android:layout_height="@dimen/small_dp_22"
+                android:layout_marginTop="@dimen/small_dp_5"
+                android:text="@{favoriteItem.mediaType}"
+                style="@style/Black_SF_PRO_Regular_16"
+                app:layout_constraintStart_toStartOf="@+id/recycler_item_search_txt_name"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_item_search_txt_name">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/recycler_item_favorites_ic_calendar"
+                android:layout_width="@dimen/small_dp_16"
+                android:layout_height="@dimen/small_dp_16"
+                android:layout_marginTop="@dimen/small_dp_8"
+                android:src="@drawable/main_screen_image_calendar"
+                app:layout_constraintStart_toStartOf="@+id/recycler_item_favorites_txt_info"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_item_favorites_txt_info" />
+
+            <TextView
+                android:id="@+id/recycler_item_favorites_txt_date"
+                style="@style/Grey_SF_PRO_Regular_12"
+                android:layout_width="@dimen/huge_dp_128"
+                android:layout_height="@dimen/small_dp_16"
+                android:layout_marginStart="@dimen/small_dp_4"
+                android:text="@{favoriteItem.date}"
+                app:layout_constraintBottom_toBottomOf="@+id/recycler_item_favorites_ic_calendar"
+                app:layout_constraintStart_toEndOf="@+id/recycler_item_favorites_ic_calendar"
+                app:layout_constraintTop_toTopOf="@+id/recycler_item_favorites_ic_calendar" />
+
+            <ImageView
+                android:id="@+id/recycler_item_movie_btn_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_12"
+                android:layout_marginEnd="@dimen/small_dp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/heart_selected" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

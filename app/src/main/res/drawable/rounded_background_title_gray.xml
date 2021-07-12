@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="@color/map_title_color">
+    </solid>
+    <stroke
+        android:width="@dimen/rounded_background_width"
+        android:color="@color/map_title_color">
+    </stroke>
+    <corners
+        android:topLeftRadius="@dimen/small_dp_2"
+        android:topRightRadius="@dimen/small_dp_2"
+        android:bottomLeftRadius="@dimen/small_dp_2"
+        android:bottomRightRadius="@dimen/small_dp_2">
+    </corners>
+</shape>

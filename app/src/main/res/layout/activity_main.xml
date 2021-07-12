@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.screens.dashboard.main.view.MainView">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/none_dp"
+        android:layout_weight="1">
+
+        <fragment
+            android:id="@+id/fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/app_navigation" />
+
+        <FrameLayout
+            android:id="@+id/activity_main_layout_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ProgressBar
+                android:id="@+id/activity_main_progress_bar_loading"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/activity_main_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/medium_dp_50"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabIndicatorGravity="bottom">
+    </com.google.android.material.tabs.TabLayout>
+
+</LinearLayout>

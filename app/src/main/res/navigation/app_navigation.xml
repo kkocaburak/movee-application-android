@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/userFragment">
+
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.adesso.moveeapplication.ui.screens.detail.moviedetail.view.MovieDetailFragment"
+        android:label="fragment_movie_info"
+        tools:layout="@layout/fragment_movie_detail" >
+        <action
+            android:id="@+id/action_movieInfo_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_movieInfo_to_tvCastDetailFragment"
+            app:destination="@id/castDetailFragment" />
+        <argument
+            android:name="movieDetail"
+            app:argType="com.adesso.moveeapplication.data.model.tmdb.IMovie" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.adesso.moveeapplication.ui.screens.dashboard.main.view.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_movieInfo"
+            app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_tvSeriesDetailFragment"
+            app:destination="@id/tvSeriesDetailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_castDetailFragment"
+            app:destination="@id/castDetailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvSeriesDetailFragment"
+        android:name="com.adesso.moveeapplication.ui.screens.detail.tvdetail.view.TvSeriesDetailFragment"
+        android:label="fragment_tv_series_detail"
+        tools:layout="@layout/fragment_tv_series_detail" >
+        <action
+            android:id="@+id/action_tvSeriesDetailFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_tvSeriesDetailFragment_to_tvCastDetailFragment"
+            app:destination="@id/castDetailFragment" />
+        <argument
+            android:name="tvDetail"
+            app:argType="com.adesso.moveeapplication.data.model.tmdb.ITvSeries" />
+    </fragment>
+    <fragment
+        android:id="@+id/castDetailFragment"
+        android:name="com.adesso.moveeapplication.ui.screens.detail.castdetail.view.CastFragment"
+        android:label="fragment_tv_cast_detail"
+        tools:layout="@layout/fragment_cast_detail" >
+        <argument
+            android:name="castDetail"
+            app:argType="com.adesso.moveeapplication.data.model.tmdb.ICast" />
+        <action
+            android:id="@+id/action_tvCastDetailFragment_to_movieInfo"
+            app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_tvCastDetailFragment_to_tvSeriesDetailFragment"
+            app:destination="@id/tvSeriesDetailFragment" />
+        <action
+            android:id="@+id/action_castDetailFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.adesso.moveeapplication.ui.screens.dashboard.login.view.LoginFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_userFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.adesso.moveeapplication.ui.screens.map.view.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.adesso.moveeapplication.ui.screens.settings.setting.view.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_creditsFragment"
+            app:destination="@id/creditsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_licencesFragment"
+            app:destination="@id/licencesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditsFragment"
+        android:name="com.adesso.moveeapplication.ui.screens.settings.credits.view.CreditsFragment"
+        android:label="fragment_credits"
+        tools:layout="@layout/fragment_credits" >
+        <action
+            android:id="@+id/action_creditsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/licencesFragment"
+        android:name="com.adesso.moveeapplication.ui.screens.settings.licences.view.LicensesFragment"
+        android:label="fragment_licences"
+        tools:layout="@layout/fragment_licenses" >
+        <action
+            android:id="@+id/action_licencesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+</navigation>

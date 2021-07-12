@@ -1,0 +1,34 @@
+{
+  "id": 2,
+  "cast": [
+    {
+      "adult": false,
+      "gender": 2,
+      "id": 54768,
+      "known_for_department": "Acting",
+      "original_name": "Turo Pajala",
+      "popularity": 0.98,
+      "profile_path": null,
+      "name": "Turo Pajala",
+      "cast_id": 3,
+      "character": "Taisto Olavi Kasurinen",
+      "credit_id": "52fe420dc3a36847f8000029",
+      "order": 0
+    }
+  ],
+  "crew": [
+    {
+      "adult": false,
+      "gender": 2,
+      "id": 16767,
+      "known_for_department": "Directing",
+      "original_name": "Aki Kaurismäki",
+      "popularity": 1.868,
+      "profile_path": "/kiJErWEOv4Ew7aHOGKg4ljsmppZ.jpg",
+      "name": "Aki Kaurismäki",
+      "credit_id": "52fe420dc3a36847f800001f",
+      "department": "Writing",
+      "job": "Screenplay"
+    }
+  ]
+}

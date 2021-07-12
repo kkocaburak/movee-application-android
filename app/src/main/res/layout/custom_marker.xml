@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/medium_dp_32"
+    android:background="@drawable/rounded_background_title_gray"
+    android:layout_gravity="center|top">
+
+    <TextView
+        android:id="@+id/text_marker_title"
+        style="@style/White_SF_PRO_Regular_12"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/medium_dp_32"
+        android:paddingTop="@dimen/small_dp_4"
+        android:paddingRight="@dimen/small_dp_8"
+        android:paddingLeft="@dimen/small_dp_8"
+        android:paddingBottom="@dimen/small_dp_4"
+        android:layout_gravity="center"
+        android:gravity="center" />
+
+</LinearLayout>

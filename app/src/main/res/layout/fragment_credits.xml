@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen_background"
+    tools:context=".ui.screens.settings.credits.view.CreditsFragment">
+
+    <TextView
+        android:id="@+id/fragment_credits_txt_creator"
+        style="@style/Blue_SF_PRO_Bold_16"
+        android:layout_width="@dimen/huge_dp_128"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/rounded_background_white"
+        android:text="@string/creator_string"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_credits_txt_creator_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/fragment_credits_txt_creator_name"
+        style="@style/Blue_SF_PRO_Bold_16"
+        android:layout_width="@dimen/huge_dp_140"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_dp_16"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_background_white"
+        android:text="@string/creator_name"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_credits_txt_creator" />
+
+    <TextView
+        android:id="@+id/fragment_credits_txt_version"
+        style="@style/Blue_SF_PRO_Bold_16"
+        android:layout_width="@dimen/huge_dp_140"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_dp_8"
+        android:layout_marginStart="@dimen/small_dp_8"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:text="@string/version_string"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

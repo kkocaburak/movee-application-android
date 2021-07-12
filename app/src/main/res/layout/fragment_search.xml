@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/huge_dp_240"
+        android:background="@color/vibrant_blue"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/White_SF_PRO_Bold_32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_dp_32"
+            android:layout_marginTop="@dimen/medium_dp_48"
+            android:text="@string/search_string"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="@dimen/huge_dp_270"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_dp_24"
+            android:layout_marginTop="@dimen/medium_dp_28"
+            android:elevation="@dimen/small_dp_24"
+            app:cardCornerRadius="@dimen/small_dp_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/fragment_search_ic_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_tabbar_search" />
+
+                <EditText
+                    android:id="@+id/fragment_search_edit_text"
+                    style="@style/Black_SF_PRO_Medium_16"
+                    android:layout_width="@dimen/huge_dp_200"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/movies_or_series_string"/>
+
+                <ImageView
+                    android:id="@+id/fragment_search_ic_cancel"
+                    android:layout_width="@dimen/small_dp_16"
+                    android:layout_height="@dimen/small_dp_16"
+                    android:src="@drawable/icon_close_x"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/fragment_search_txt_cancel"
+            style="@style/White_SF_PRO_Regular_16"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/medium_dp_36"
+            android:layout_marginStart="@dimen/small_dp_12"
+            android:gravity="center"
+            android:text="@string/cancel_string"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <LinearLayout
+            android:id="@+id/fragment_search_layout_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_24"
+                android:src="@drawable/movie_group"/>
+
+            <TextView
+                android:layout_width="@dimen/huge_dp_216"
+                android:layout_height="wrap_content"
+                style="@style/Blue_SF_PRO_Bold_16"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/search_result_false_string"/>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_search_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

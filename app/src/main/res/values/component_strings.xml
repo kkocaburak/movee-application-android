@@ -1,0 +1,8 @@
+<resources>
+    <string name="movie_recyclerview_movie_name">Joker</string>
+    <string name="movie_recyclerview_genre_name">Suç, Drama, Gerilim</string>
+    <string name="movie_recyclerview_movie_date">14.04.2020</string>
+    <string name="movie_recyclerview_movie_score">8.9</string>
+    <string name="movie_recyclerview_header_name">Başlık</string>
+    <string name="movie_recyclerview_genre_separator" translatable="false">,\u0020</string>
+</resources>

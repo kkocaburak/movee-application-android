@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/huge_dp_300"
+    android:layout_height="@dimen/huge_dp_128"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/small_dp_8"
+    android:layout_gravity="center|top">
+
+    <LinearLayout
+        android:layout_width="@dimen/huge_dp_300"
+        android:layout_height="@dimen/huge_dp_128"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Black_SF_PRO_Bold_20"
+            android:id="@+id/pop_up_place_txt_name"
+            android:layout_width="@dimen/huge_dp_280"
+            android:layout_height="@dimen/medium_dp_28"
+            android:layout_marginTop="@dimen/small_dp_8"
+            android:layout_marginStart="@dimen/small_dp_20"/>
+
+        <TextView
+            style="@style/Black_SF_PRO_Regular_16"
+            android:id="@+id/pop_up_place_txt_address"
+            android:layout_width="@dimen/huge_dp_280"
+            android:layout_height="@dimen/small_dp_20"
+            android:layout_marginTop="@dimen/small_dp_4"
+            android:layout_marginStart="@dimen/small_dp_20"/>
+
+        <TextView
+            style="@style/Blue_SF_PRO_Bold_16"
+            android:id="@+id/pop_up_place_txt_website"
+            android:layout_width="@dimen/huge_dp_280"
+            android:layout_height="@dimen/small_dp_24"
+            android:layout_marginTop="@dimen/small_dp_4"
+            android:layout_marginStart="@dimen/small_dp_20"/>
+
+        <TextView
+            android:layout_width="@dimen/huge_dp_240"
+            android:layout_height="@dimen/small_dp_1"
+            android:background="@color/movee_gray"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/small_dp_20"
+            android:layout_marginEnd="@dimen/small_dp_20"/>
+
+        <LinearLayout
+            android:id="@+id/pop_up_place_layout_go"
+            android:layout_width="@dimen/huge_dp_240"
+            android:layout_height="@dimen/small_dp_24"
+            android:background="@drawable/rounded_background_blue"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/small_dp_8"
+            android:layout_marginStart="@dimen/small_dp_20"
+            android:layout_marginEnd="@dimen/small_dp_20"
+            android:layout_marginBottom="@dimen/small_dp_16">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_map_navigation"/>
+
+            <TextView
+                style="@style/White_SF_PRO_Bold_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_dp_4"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/go_string"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

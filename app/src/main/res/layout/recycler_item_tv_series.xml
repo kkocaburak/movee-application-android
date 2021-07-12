@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.adesso.moveeapplication.ui.components.tvrecycler.RecyclerTvRowHolder"/>
+        <variable
+            name="tvSeries"
+            type="com.adesso.moveeapplication.data.model.tmdb.TvSeries" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="@dimen/small_radius_8"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/huge_dp_300"
+        android:layout_marginTop="@dimen/small_dp_8"
+        android:layout_marginBottom="@dimen/small_dp_8"
+        android:layout_marginStart="@dimen/small_dp_24">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/huge_dp_300"
+            android:layout_marginBottom="@dimen/small_dp_8">
+
+            <ImageView
+                android:id="@+id/recycler_item_tv_img"
+                android:layout_width="@dimen/huge_dp_140"
+                android:layout_height="@dimen/huge_dp_196"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@{tvSeries.posterPath}"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/recycler_item_tv_btn_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_8"
+                android:src="@drawable/heart_selected"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_item_tv_img" />
+
+            <TextView
+                android:id="@+id/recycler_item_tv_txt_name"
+                style="@style/Black_SF_PRO_Bold_16"
+                android:layout_width="@dimen/large_dp_100"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_2"
+                android:gravity="center"
+                android:text="@{tvSeries.name}"
+                android:maxLines="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_item_tv_btn_like" />
+
+            <LinearLayout
+                android:layout_width="@dimen/medium_dp_50"
+                android:layout_height="@dimen/small_dp_20"
+                android:background="@drawable/rounded_background_blue"
+                android:layout_marginBottom="@dimen/small_dp_4"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/small_dp_16"
+                    android:layout_height="@dimen/small_dp_16"
+                    android:src="@drawable/main_screen_image_star" />
+
+                <TextView
+                    android:id="@+id/recycler_item_tv_txt_rating"
+                    style="@style/White_SF_PRO_Black_10"
+                    android:layout_width="@dimen/small_dp_22"
+                    android:layout_height="@dimen/small_dp_16"
+                    android:layout_marginStart="@dimen/small_dp_4"
+                    android:text="@{Double.toString(tvSeries.voteAverage)}" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

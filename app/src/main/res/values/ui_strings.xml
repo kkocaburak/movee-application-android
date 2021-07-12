@@ -1,0 +1,84 @@
+<resources>
+    <!-- Splash Screen -->
+    <string name="activity_splash_text_movie">Movie</string>
+    <!-- Main Screen -->
+    <string name="movies_string">Movies</string>
+    <string name="activity_main_text_popular">Popular</string>
+    <string name="top_rated_string">Top Rated Series</string>
+    <string name="popular_movies_string">Popular Movies</string>
+    <string name="activity_main_text_carousel_recycler" translatable="false">CarouselRecyclerview</string>
+    <string name="movie_string">Movie</string>
+    <string name="tv_series_string">Tv Series</string>
+    <string name="actor_string">Actor</string>
+    <string name="actress_string">Actress</string>
+    <!-- Movie Detail Screen -->
+    <string name="overview_string">Overview</string>
+    <string name="rate_string">Rate (%1$s)</string>
+    <string name="share_string">Share</string>
+    <string name="writer_string">Writer</string>
+    <string name="ui_writer_string">Writers:</string>
+    <string name="director_string">Director</string>
+    <string name="ui_director_string">Director:</string>
+    <string name="ui_creators_string">Creators:</string>
+    <string name="cast_string">Cast</string>
+    <string name="stars_string">Stars:</string>
+    <string name="movie_time_string">119 min</string>
+    <string name="separator_string" translatable="false">|</string>
+    <!-- Tv Series Detail Screen -->
+    <string name="fragment_tv_series_detail_txt_season">\u0020 seasons</string>
+    <string name="min_string">\u0020 min</string>
+    <!-- Tv Series Cast Detail Screen -->
+    <string name="born_string">Born:</string>
+    <string name="full_bio_string">See full bio >></string>
+    <string name="less_bio_string">"See less >>"</string>
+    <string name="date_ymd_format_string" translatable="false">"yyyy-MM-dd"</string>
+    <string name="date_mdy_format_string" translatable="false">"LLLL dd, yyyy"</string>
+    <string name="in_string" translatable="false">"\u0020 in "</string>
+    <!-- Search Fragment -->
+    <string name="search_string">Search</string>
+    <string name="cancel_string">Cancel</string>
+    <string name="movies_or_series_string">Movies or Series</string>
+    <string name="search_result_false_string">your search didn’t have any results</string>
+    <!-- User Fragment -->
+    <string name="username_string">Username</string>
+    <string name="password_string">Password</string>
+    <string name="password_again_string" translatable="false">Password Again</string>
+    <string name="email_string" translatable="false">Email address</string>
+    <string name="forgot_password_string">Forgot Password?</string>
+    <string name="login_string">Login</string>
+    <string name="continue_guest_string">Continue as Guest</string>
+    <string name="register_string">Register</string>
+    <string name="register_text_string">Don\'t have an account?</string>
+    <string name="register_now_string">Register Now</string>
+    <!-- Profile Fragment -->
+    <string name="profile_string">Profile</string>
+    <string name="hello_string">Hello</string>
+    <string name="cinema_string">Cinema</string>
+    <string name="guest_string">Guest</string>
+    <string name="favorites_string">Favorites</string>
+    <string name="movie_type">Movie</string>
+    <string name="tv_series_type">Tv Series</string>
+    <!-- Settings Fragment -->
+    <string name="credits_string">Credits</string>
+    <string name="licenses_string">Licenses</string>
+    <!-- Credits Fragment -->
+    <string name="creator_string">Creator</string>
+    <string name="creator_name" translatable="false">Burak Karakoca</string>
+    <string name="version_string" translatable="false">Version: 1.0</string>
+    <!-- Licenses Fragment -->
+    <string name="retrofit_url_string" translatable="false">Retrofit License</string>
+    <string name="glide_url_string" translatable="false">Glide License</string>
+    <string name="rx_java_url_string" translatable="false">RxJava License</string>
+    <string name="rx_binding_url_string" translatable="false">RxBinding License</string>
+    <string name="retrofit_url" translatable="false">https://raw.githubusercontent.com/square/retrofit/master/LICENSE.txt</string>
+    <string name="glide_url" translatable="false">https://raw.githubusercontent.com/bumptech/glide/master/LICENSE</string>
+    <string name="rx_java_url" translatable="false">https://raw.githubusercontent.com/ReactiveX/RxJava/3.x/LICENSE</string>
+    <string name="rx_binding_url" translatable="false">https://raw.githubusercontent.com/JakeWharton/RxBinding/master/LICENSE.txt</string>
+    <!-- Map Fragment -->
+    <string name="access_denied_string">Access Denied</string>
+    <string name="info_message_string">Info Message</string>
+    <string name="go_string">Go!</string>
+    <string name="map_location_string" translatable="false">google.navigation:q=%1$s,%2$s</string>
+    <string name="map_url_string" translatable="false">com.google.android.apps.maps</string>
+
+</resources>

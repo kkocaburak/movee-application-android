@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.adesso.moveeapplication.ui.components.holder.RecyclerCastMoviesRowHolder"/>
+        <variable
+            name="castMovie"
+            type="com.adesso.moveeapplication.data.model.tmdb.Movie" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/large_dp_100"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium_dp_32"
+        android:layout_marginBottom="@dimen/small_dp_8"
+        android:gravity="center"
+        app:cardCornerRadius="@dimen/small_dp_8">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/recycler_item_cast_img_movie"
+                android:layout_width="@dimen/large_dp_100"
+                android:layout_height="@dimen/huge_dp_140"
+                android:src="@{castMovie.posterPath}">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/recycler_item_cast_txt_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/medium_dp_40"
+                android:layout_marginBottom="@dimen/small_dp_4"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@{castMovie.title}"
+                style="@style/Black_SF_PRO_Regular_16">
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

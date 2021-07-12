@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.adesso.moveeapplication.ui.components.header.PrimarySectionRowHolder"/>
+       <variable
+            name="primaryHeader"
+            type="com.adesso.moveeapplication.ui.components.generic.PrimaryHeaderSection" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/huge_dp_128"
+        android:background="@color/vibrant_blue"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/primary_header_textview"
+            style="@style/White_SF_PRO_Bold_32"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/medium_dp_48"
+            android:layout_marginTop="@dimen/medium_dp_48"
+            android:layout_marginStart="@dimen/medium_dp_32"
+            android:text="@{primaryHeader.title}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/primary_header_icon_map"
+            android:background="@drawable/rounded_background_white"
+            android:layout_width="@dimen/medium_dp_36"
+            android:layout_height="@dimen/medium_dp_36"
+            android:layout_marginEnd="@dimen/medium_dp_32"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/primary_header_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/primary_header_textview">
+
+            <ImageView
+                android:layout_width="@dimen/medium_dp_28"
+                android:layout_height="@dimen/medium_dp_28"
+                android:src="@drawable/ic_map" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

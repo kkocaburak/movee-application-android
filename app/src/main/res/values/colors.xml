@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="vibrant_blue">#003DFF</color>
+    <color name="movee_gray">#d1d1d6</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="almost_black">#08090a</color>
+    <color name="almost_grey">#abb4bd</color>
+    <color name="charcoal_grey">#393a3b</color>
+    <color name="map_title_color">#323643</color>
+    <color name="transparent">#00000000</color>
+</resources>

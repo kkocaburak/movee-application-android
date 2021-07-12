@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.adesso.moveeapplication.ui.components.movierecycler.RecyclerMovieRowHolder"/>
+        <variable
+            name="rowHolder"
+            type="com.adesso.moveeapplication.ui.components.movierecycler.RecyclerMovieRowHolder" />
+        <variable
+            name="movie"
+            type="com.adesso.moveeapplication.data.model.tmdb.Movie" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_dp_100"
+        app:cardCornerRadius="@dimen/small_radius_8"
+        android:layout_marginStart="@dimen/medium_dp_32"
+        android:layout_marginEnd="@dimen/medium_dp_32"
+        android:layout_marginTop="@dimen/small_dp_8"
+        android:layout_marginBottom="@dimen/small_dp_8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/recycler_item_movie_img"
+                android:layout_width="@dimen/large_dp_72"
+                android:layout_height="@dimen/large_dp_100"
+                android:src="@{movie.posterPath}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/recycler_item_movie_txt_name"
+                android:layout_width="@dimen/huge_dp_216"
+                android:layout_height="@dimen/medium_dp_28"
+                android:layout_marginStart="@dimen/small_dp_10"
+                android:layout_marginTop="@dimen/small_dp_8"
+                style="@style/Black_SF_PRO_Bold_20"
+                android:text="@{movie.title}"
+                app:layout_constraintStart_toEndOf="@+id/recycler_item_movie_img"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <TextView
+                android:id="@+id/recycler_item_movie_txt_genre"
+                android:layout_width="@dimen/huge_dp_216"
+                android:layout_height="@dimen/small_dp_22"
+                android:layout_marginTop="@dimen/small_dp_5"
+                style="@style/Black_SF_PRO_Regular_16"
+                app:layout_constraintStart_toStartOf="@+id/recycler_item_movie_txt_name"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_item_movie_txt_name">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/small_dp_16"
+                android:layout_height="@dimen/small_dp_16"
+                android:layout_marginTop="@dimen/small_dp_10"
+                android:src="@drawable/main_screen_image_calendar"
+                app:layout_constraintStart_toStartOf="@+id/recycler_item_movie_txt_genre"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_item_movie_txt_genre">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/recycler_item_movie_txt_date"
+                android:layout_width="@dimen/large_dp_72"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_dp_5"
+                style="@style/Black_SF_PRO_Regular_12"
+                android:text="@{movie.releaseDate}"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="@dimen/medium_dp_56"
+                android:layout_height="@dimen/small_dp_22"
+                android:layout_marginStart="@dimen/small_dp_12"
+                android:layout_marginTop="@dimen/small_dp_8"
+                android:background="@drawable/rounded_background_blue"
+                app:layout_constraintStart_toEndOf="@+id/recycler_item_movie_txt_date"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_item_movie_txt_genre">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_dp_10"
+                    android:layout_marginTop="@dimen/small_dp_4"
+                    android:layout_marginBottom="@dimen/small_dp_5"
+                    android:src="@drawable/main_screen_image_star">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/recycler_item_movie_txt_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/White_SF_PRO_Black_10"
+                    android:layout_gravity="center"
+                    android:text="@{Double.toString(movie.voteAverage)}"
+                    android:layout_marginStart="@dimen/small_dp_8">
+                </TextView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/recycler_item_movie_btn_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp_12"
+                android:layout_marginEnd="@dimen/small_dp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/heart_selected" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

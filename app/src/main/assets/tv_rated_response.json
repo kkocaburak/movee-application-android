@@ -1,0 +1,29 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "original_name": "The Mandalorian",
+      "id": 82856,
+      "name": "The Mandalorian",
+      "vote_count": 2163,
+      "vote_average": 8.5,
+      "first_air_date": "2019-11-12",
+      "poster_path": "/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+      "genre_ids": [
+        10765,
+        10759,
+        37
+      ],
+      "original_language": "en",
+      "backdrop_path": "/9ijMGlJKqcslswWUzTEwScm82Gs.jpg",
+      "overview": "After the fall of the Galactic Empire, lawlessness has spread throughout the galaxy. A lone gunfighter makes his way through the outer reaches, earning his keep as a bounty hunter.",
+      "origin_country": [
+        "US"
+      ],
+      "popularity": 1199.859,
+      "rating": 8
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 3
+}

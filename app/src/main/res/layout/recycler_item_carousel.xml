@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/small_dp_24"
+    android:layout_marginEnd="@dimen/small_dp_8"
+    android:layout_marginBottom="@dimen/small_dp_8"
+    app:cardCornerRadius="@dimen/small_radius_8">
+
+    <LinearLayout
+        android:id="@+id/recyclerview_vision_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/recycler_item_tv_img"
+            android:layout_width="@dimen/huge_dp_200"
+            android:layout_height="@dimen/huge_dp_270"
+            android:layout_gravity="center"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:id="@+id/recyclerview_vision_linear_rating"
+            android:layout_width="@dimen/medium_dp_50"
+            android:layout_height="@dimen/small_dp_20"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_background_blue"
+            android:layout_marginTop="@dimen/small_dp_12"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/small_dp_16"
+                android:layout_height="@dimen/small_dp_16"
+                android:src="@drawable/main_screen_image_star"/>
+
+            <TextView
+                android:id="@+id/recyclerview_vision_txt_movie_rate"
+                android:layout_width="@dimen/small_dp_20"
+                android:layout_height="@dimen/small_dp_16"
+                android:layout_gravity="center"
+                style="@style/White_SF_PRO_Black_10"
+                android:layout_marginStart="@dimen/small_dp_4" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/recyclerview_vision_txt_movie_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/medium_dp_40"
+            android:layout_marginTop="@dimen/small_dp_4"
+            style="@style/Black_SF_PRO_Bold_28"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/recyclerview_vision_txt_movie_genre"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/medium_dp_48"
+            android:layout_marginTop="@dimen/small_dp_4"
+            android:layout_marginBottom="@dimen/small_dp_8"
+            style="@style/Black_SF_PRO_Medium_16"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

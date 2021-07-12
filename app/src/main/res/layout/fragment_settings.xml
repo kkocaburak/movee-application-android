@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="settingsFragment"
+            type="com.adesso.moveeapplication.ui.screens.settings.setting.view.SettingsFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_screen_background"
+        tools:context=".ui.screens.settings.setting.view.SettingsFragment">
+
+        <Button
+            android:id="@+id/fragment_settings_button_credits"
+            style="@style/Blue_SF_PRO_Bold_16"
+            android:layout_width="@dimen/huge_dp_300"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:text="@string/credits_string"
+            android:onClick="@{() -> settingsFragment.goToCreditsScreen()}"
+            app:layout_constraintBottom_toTopOf="@+id/fragment_login_button_licences"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/fragment_login_button_licences"
+            style="@style/Blue_SF_PRO_Bold_16"
+            android:layout_width="@dimen/huge_dp_300"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_dp_32"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:text="@string/licenses_string"
+            android:onClick="@{() -> settingsFragment.goToLicencesScreen()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_settings_button_credits" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
